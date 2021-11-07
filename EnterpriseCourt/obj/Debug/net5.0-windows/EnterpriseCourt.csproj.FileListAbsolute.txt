@@ -1,0 +1,5 @@
+C:\Users\pasha\source\repos\EnterpriseCourt\EnterpriseCourt\obj\Debug\net5.0-windows\EnterpriseCourt.csprojAssemblyReference.cache
+C:\Users\pasha\source\repos\EnterpriseCourt\EnterpriseCourt\obj\Debug\net5.0-windows\MainWindow.g.cs
+C:\Users\pasha\source\repos\EnterpriseCourt\EnterpriseCourt\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\pasha\source\repos\EnterpriseCourt\EnterpriseCourt\obj\Debug\net5.0-windows\EnterpriseCourt_MarkupCompile.cache
+C:\Users\pasha\source\repos\EnterpriseCourt\EnterpriseCourt\obj\Debug\net5.0-windows\EnterpriseCourt_MarkupCompile.lref
