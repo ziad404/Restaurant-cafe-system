@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace EnterpriseCourt.DAL
 {
@@ -13,7 +13,7 @@ namespace EnterpriseCourt.DAL
         SqlConnection sqlConnection;
         public DataAccessLayer()
         {
-            sqlConnection = new SqlConnection(@"Data Source=.\SQLEXPRESS; Database=dd; Integrated Security=true");
+            sqlConnection = new SqlConnection(@"Data Source=.\SQLEXPRESS; Database=Court; Integrated Security=true");
         }
         public void Open()
         {

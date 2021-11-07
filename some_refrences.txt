@@ -1,0 +1,256 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
+
+namespace ElsafoaLabs.PL
+{
+    class GET_ALL_DATA_FROM_CLIENTS
+    {
+        //public DataTable GetData()
+        //{
+        //    DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
+        //    DataTable Dt = new DataTable();
+        //    Dt = DAL.SelectData("get_All_Patients", null);
+        //    DAL.Colse();
+        //    return Dt;
+        //}
+        public void ADD_ITEM(string id, string name)
+        {
+            DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
+            DAL.Open();
+            SqlParameter[] param = new SqlParameter[2];
+            param[0] = new SqlParameter("@id", SqlDbType.VarChar, 50);
+            param[0].Value = id;
+            param[1] = new SqlParameter("@name", SqlDbType.VarChar, 50);
+            param[1].Value = name;
+
+            DAL.ExecuteCommand("ADD_ITEM", param);
+            DAL.Colse();
+        }
+
+        public void signup(string userName , string password , string role)
+        {
+            DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
+            DAL.Open();
+            SqlParameter[] param = new SqlParameter[3];
+            param[0] = new SqlParameter("@userName", SqlDbType.NVarChar, 50);
+            param[0].Value = userName;
+            param[1] = new SqlParameter("@password", SqlDbType.NVarChar, 50);
+            param[1].Value = password;
+            param[2] = new SqlParameter("@role", SqlDbType.NVarChar, 50);
+            param[2].Value = role;
+
+            DAL.ExecuteCommand("SIGN_UP", param);
+            DAL.Colse();
+        }
+
+       
+        public void ADD_EXCAMINATION( string ex_ar, string ex_en, float price,int machineID)
+        {
+            DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
+            DAL.Open();
+            SqlParameter[] param = new SqlParameter[4];
+            param[0] = new SqlParameter("@EXCAMINATION_AR", SqlDbType.NVarChar, 50);
+            param[0].Value = ex_ar;
+            param[1] = new SqlParameter("@EXCAMINATION_EN", SqlDbType.NVarChar, 50);
+            param[1].Value = ex_en;
+            param[2] = new SqlParameter("@PRICE", SqlDbType.Float);
+            param[2].Value = price;
+            param[3] = new SqlParameter("@ID_machine", SqlDbType.Int);
+            param[3].Value = machineID;
+            DAL.ExecuteCommand("ADD_EXCAMINATION", param);
+            DAL.Colse();
+        }
+        public DataTable getAllExcamination()
+        {
+            DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
+            DataTable Dt = new DataTable();
+            Dt = DAL.SelectData("GET_EXCAMINATIONS", null);
+            DAL.Colse();
+            return Dt;
+        }
+        public void addNewPatient(string PatientName, string PatientPhone,
+            int age, string sex, string doctor, int percantage, string machineName,
+            string excamination, string kind, float price, string waiter, float sale,
+            float priceAfterPercentage, float purePaid, float Paid, float StillNotPaid)
+        {
+            DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
+            DAL.Open();
+            SqlParameter[] param = new SqlParameter[19];
+            param[0] = new SqlParameter("@PatientName", SqlDbType.NVarChar, 50);
+            param[0].Value = PatientName;
+            param[1] = new SqlParameter("@PatientPhone", SqlDbType.NVarChar, 50);
+            param[1].Value = PatientPhone;
+            param[2] = new SqlParameter("@age", SqlDbType.Int);
+            param[2].Value = age;
+            param[3] = new SqlParameter("@sex", SqlDbType.NVarChar, 50);
+            param[3].Value = sex;
+            param[4] = new SqlParameter("@doctor", SqlDbType.NVarChar, 50);
+            param[4].Value = doctor;
+            param[5] = new SqlParameter("@percantage", SqlDbType.Int);
+            param[5].Value = percantage;
+            param[6] = new SqlParameter("@machineName", SqlDbType.NVarChar, 50);
+            param[6].Value = machineName;
+            param[7] = new SqlParameter("@excamination", SqlDbType.NVarChar, 50);
+            param[7].Value = excamination;
+            param[8] = new SqlParameter("@kind", SqlDbType.NVarChar, 50);
+            param[8].Value = kind;
+            param[9] = new SqlParameter("@price", SqlDbType.Float);
+            param[9].Value = price;
+            param[10] = new SqlParameter("@waiter", SqlDbType.NVarChar, 50);
+            param[10].Value = waiter;
+            param[11] = new SqlParameter("@sale", SqlDbType.Float);
+            param[11].Value = sale;
+            param[12] = new SqlParameter("@priceAfterPercentage", SqlDbType.Float);
+            param[12].Value = priceAfterPercentage;
+            param[13] = new SqlParameter("@purePaid", SqlDbType.Float);
+            param[13].Value = purePaid;
+            param[14] = new SqlParameter("@Paid", SqlDbType.Float);
+            param[14].Value = Paid;
+            param[15] = new SqlParameter("@StillNotPaid", SqlDbType.Float);
+            param[15].Value = StillNotPaid;
+            param[16] = new SqlParameter("@Date", SqlDbType.Date);
+            param[16].Value = DateTime.Now.ToString("M/d/yyyy");
+            
+            param[17] = new SqlParameter("@File_num", SqlDbType.NVarChar);
+            param[17].Value = (machineName[0] + DateTime.Now.ToString());
+
+            param[18] = new SqlParameter("@DoctorX", SqlDbType.NVarChar);
+            param[18].Value = Helper.doc1;
+            DAL.ExecuteCommand("insertInPatient", param);
+            DAL.Colse();
+        }
+
+        public void addNewMachine(string machineName)
+        {
+            DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
+            DAL.Open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@Name", SqlDbType.NVarChar, 50);
+            param[0].Value = machineName;
+            
+            DAL.ExecuteCommand("addMachine", param);
+            DAL.Colse();
+        }
+
+        public DataTable getAllMachine()
+        {
+            DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
+            DataTable Dt = new DataTable();
+            Dt = DAL.SelectData("getAllMachines", null);
+            DAL.Colse();
+            return Dt;
+        }
+
+        public DataTable Login(string userName , string password)
+        {
+            DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
+            SqlParameter[] param = new SqlParameter[2];
+
+            param[0] = new SqlParameter("@userName", SqlDbType.NVarChar, 50);
+            param[0].Value = userName;
+
+            param[1] = new SqlParameter("@Password", SqlDbType.NVarChar, 50);
+            param[1].Value = password;
+
+            DAL.Open();
+            DataTable DT = new DataTable();
+            DT = DAL.SelectData("SAFOA_LOGIN", param);
+            return DT;
+        }
+
+        public DataTable getExaminationsByMachineID(int id)
+        {
+            DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
+            SqlParameter[] param = new SqlParameter[1];
+
+            param[0] = new SqlParameter("@machineID", SqlDbType.Int);
+            param[0].Value = id;
+
+            DAL.Open();
+            DataTable DT = new DataTable();
+            DT = DAL.SelectData("selectExaminationWithMachineID", param);
+            return DT;
+        }
+        public DataTable getPatientByID(int ID)
+        {
+            DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
+            SqlParameter[] param = new SqlParameter[1];
+
+            param[0] = new SqlParameter("@ID", SqlDbType.Int);
+            param[0].Value = ID;
+            DataTable Dt = new DataTable();
+            Dt = DAL.SelectData("getPatientByID", param);
+            DAL.Colse();
+            return Dt;
+        }
+
+        public DataTable checkPaid(int ID)
+        {
+            DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
+            SqlParameter[] param = new SqlParameter[1];
+
+            param[0] = new SqlParameter("@ID", SqlDbType.Int);
+            param[0].Value = ID;
+            DataTable Dt = new DataTable();
+            Dt = DAL.SelectData("checkPaid", param);
+            DAL.Colse();
+            return Dt;
+        }
+
+        public void payStillNotPaid(int ID)
+        {
+            DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
+            SqlParameter[] param = new SqlParameter[2];
+
+            param[0] = new SqlParameter("@ID", SqlDbType.Int);
+            param[0].Value = ID;
+
+            param[1] = new SqlParameter("@Date", SqlDbType.Date);
+            param[1].Value = DateTime.Now.ToString("M/d/yyyy");
+
+            DAL.SelectData("payStillNotPaid", param);
+            DAL.Colse();
+
+        }
+
+        public DataTable getLastPatientAdded()
+        {
+            DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
+            DataTable Dt = new DataTable();
+            Dt = DAL.SelectData("finalpatient", null);
+            DAL.Colse();
+            return Dt;
+        }
+
+        public DataTable getAllDoctores()
+        {
+            DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
+            DataTable Dt = new DataTable();
+            Dt = DAL.SelectData("get_all_doctores", null);
+            DAL.Colse();
+            return Dt;
+        }
+
+        public void inserDoctor(string DoctorName)
+        {
+            DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
+            DAL.Open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@Name", SqlDbType.NVarChar, 50);
+            param[0].Value = DoctorName;
+
+            DAL.ExecuteCommand("insert_doc", param);
+            DAL.Colse();
+        }
+
+    }
+}
+
+
+
+
