@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace EnterpriseCourt
+namespace EnterpriseCourt.Screens.CashierRoles
 {
     /// <summary>
-    /// Interaction logic for Authntication.xaml
+    /// Interaction logic for OrderType.xaml
     /// </summary>
-    public partial class Authntication : Window
+    public partial class OrderType : Window
     {
-        public Authntication()
+        public OrderType()
         {
             InitializeComponent();
         }

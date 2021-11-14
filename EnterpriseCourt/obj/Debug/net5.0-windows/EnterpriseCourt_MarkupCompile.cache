@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\pasha\source\repos\EnterpriseCourt\EnterpriseCourt\App.xaml
-11667900518
+31607956493
 
-5-343460119
+7-94954546
 1941418025770
-Authntication.xaml;
+Screens\Auth\AddingUser.xaml;Screens\Auth\Authntication.xaml;Screens\CashierRoles\OrderType.xaml;
 
 False
 

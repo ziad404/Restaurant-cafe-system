@@ -1,0 +1,32 @@
+﻿<Window x:Class="EnterpriseCourt.Screens.CashierRoles.OrderType"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EnterpriseCourt.Screens.CashierRoles"
+        mc:Ignorable="d"
+        Title="نوع الطلب" Height="450" Width="900" ResizeMode="NoResize">
+    <Grid RenderTransformOrigin="0.5,0.5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="307*"/>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="112*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="138*"/>
+            <RowDefinition Height="79*"/>
+        </Grid.RowDefinitions>
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="-0.616"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Button x:Name="hall_btn" Content="صاله" HorizontalAlignment="Left" Height="58" Margin="382,95,0,0" VerticalAlignment="Top" Width="133" FontSize="22" Foreground="#FF5F64CD" FontWeight="Bold" Background="#FF32DDC1"/>
+        <Button x:Name="takeaway_btn" Content="تيك اواي" HorizontalAlignment="Left" Height="64" Margin="380,217,0,0" VerticalAlignment="Top" Width="135" FontSize="22" Foreground="#FF5F68F0" FontWeight="Bold" Background="#FF32DDC1" Grid.RowSpan="2"/>
+        <Button x:Name="delivery_btn" Content="دليفري" HorizontalAlignment="Left" Height="58" Margin="378,61,0,0" VerticalAlignment="Top" Width="133" Grid.Row="1" FontSize="22" FontWeight="Bold" Foreground="#FF5F68F0" Background="#FF43DDC1"/>
+
+    </Grid>
+</Window>

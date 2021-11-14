@@ -25,5 +25,9 @@ C:\Users\pasha\source\repos\EnterpriseCourt\EnterpriseCourt\obj\Debug\net5.0-win
 C:\Users\pasha\source\repos\EnterpriseCourt\EnterpriseCourt\obj\Debug\net5.0-windows\ref\EnterpriseCourt.dll
 C:\Users\pasha\source\repos\EnterpriseCourt\EnterpriseCourt\obj\Debug\net5.0-windows\EnterpriseCourt.pdb
 C:\Users\pasha\source\repos\EnterpriseCourt\EnterpriseCourt\obj\Debug\net5.0-windows\EnterpriseCourt.genruntimeconfig.cache
-C:\Users\pasha\source\repos\EnterpriseCourt\EnterpriseCourt\obj\Debug\net5.0-windows\Authntication.g.cs
-C:\Users\pasha\source\repos\EnterpriseCourt\EnterpriseCourt\obj\Debug\net5.0-windows\Authntication.baml
+C:\Users\pasha\source\repos\EnterpriseCourt\EnterpriseCourt\obj\Debug\net5.0-windows\Screens\Auth\Authntication.g.cs
+C:\Users\pasha\source\repos\EnterpriseCourt\EnterpriseCourt\obj\Debug\net5.0-windows\Screens\Auth\Authntication.baml
+C:\Users\pasha\source\repos\EnterpriseCourt\EnterpriseCourt\obj\Debug\net5.0-windows\Screens\Auth\AddingUser.g.cs
+C:\Users\pasha\source\repos\EnterpriseCourt\EnterpriseCourt\obj\Debug\net5.0-windows\Screens\CashierRoles\OrderType.g.cs
+C:\Users\pasha\source\repos\EnterpriseCourt\EnterpriseCourt\obj\Debug\net5.0-windows\Screens\Auth\AddingUser.baml
+C:\Users\pasha\source\repos\EnterpriseCourt\EnterpriseCourt\obj\Debug\net5.0-windows\Screens\CashierRoles\OrderType.baml

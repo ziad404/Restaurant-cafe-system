@@ -7,12 +7,24 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Authntication.xaml.cs">
+    <Compile Update="Screens\Auth\AddingUser.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\Auth\Authntication.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\CashierRoles\OrderType.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Authntication.xaml">
+    <Page Update="Screens\Auth\AddingUser.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\Auth\Authntication.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\CashierRoles\OrderType.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
