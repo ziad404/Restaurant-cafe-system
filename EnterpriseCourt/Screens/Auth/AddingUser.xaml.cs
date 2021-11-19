@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +20,57 @@ namespace EnterpriseCourt.Screens.Auth
     /// </summary>
     public partial class AddingUser : Window
     {
+        PL.Actions actions = new PL.Actions();
+            string role = "";
         public AddingUser()
         {
             InitializeComponent();
+        }
+
+        private void submit_btn_Click(object sender, RoutedEventArgs e)
+        {
+            
+             if (admin_box.IsChecked == true && cashier_box.IsChecked == false)
+            {
+                role = "Admin";
+                
+            }
+            if (admin_box.IsChecked == false && cashier_box.IsChecked == true)
+            {
+                role = "Cashier";
+               
+
+            }
+            if (admin_box.IsChecked == false && cashier_box.IsChecked == false)
+            {
+                //role = "Cashier";
+                cashier_box.IsChecked = false;
+                admin_box.IsChecked = false;
+                MessageBox.Show("please select  mostly one role  ");
+
+            }
+
+
+            DataTable DT = actions.Add_User(name_txt.Text, pass_txt.Password,role);
+            MessageBox.Show("new user added");
+            
+            
+        }
+
+        private void admin_box_Checked(object sender, RoutedEventArgs e)
+        {
+            if(admin_box.IsChecked == true)
+            {
+                cashier_box.IsChecked = false;
+            }
+        }
+
+        private void cashier_box_Checked(object sender, RoutedEventArgs e)
+        {
+            if (cashier_box.IsChecked == true)
+            {
+                admin_box.IsChecked = false;
+            }
         }
     }
 }

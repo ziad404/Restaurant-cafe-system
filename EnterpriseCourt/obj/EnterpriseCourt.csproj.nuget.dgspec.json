@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pasha\\source\\repos\\EnterpriseCourt\\EnterpriseCourt\\EnterpriseCourt.csproj": {}
+    "C:\\Users\\ziade\\Desktop\\CourtNewSystem\\EnterpriseCourt\\EnterpriseCourt.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pasha\\source\\repos\\EnterpriseCourt\\EnterpriseCourt\\EnterpriseCourt.csproj": {
+    "C:\\Users\\ziade\\Desktop\\CourtNewSystem\\EnterpriseCourt\\EnterpriseCourt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pasha\\source\\repos\\EnterpriseCourt\\EnterpriseCourt\\EnterpriseCourt.csproj",
+        "projectUniqueName": "C:\\Users\\ziade\\Desktop\\CourtNewSystem\\EnterpriseCourt\\EnterpriseCourt.csproj",
         "projectName": "EnterpriseCourt",
-        "projectPath": "C:\\Users\\pasha\\source\\repos\\EnterpriseCourt\\EnterpriseCourt\\EnterpriseCourt.csproj",
-        "packagesPath": "C:\\Users\\pasha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pasha\\source\\repos\\EnterpriseCourt\\EnterpriseCourt\\obj\\",
+        "projectPath": "C:\\Users\\ziade\\Desktop\\CourtNewSystem\\EnterpriseCourt\\EnterpriseCourt.csproj",
+        "packagesPath": "C:\\Users\\ziade\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ziade\\Desktop\\CourtNewSystem\\EnterpriseCourt\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pasha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ziade\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -63,7 +63,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.209\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,17 @@
+﻿<Window x:Class="EnterpriseCourt.Screens.Auth.Update_admin_pass"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EnterpriseCourt.Screens.Auth"
+        mc:Ignorable="d"
+        Title="Update_admin_pass" Height="450" Width="500">
+    <Grid>
+        <Label Content="الباسورد القديم "  Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" Height="40" Margin="323,98,0,0" VerticalAlignment="Top" Width="148" RenderTransformOrigin="0.487,0.603" HorizontalContentAlignment="Center" FontSize="22" FontFamily="Simplified Arabic" FontWeight="Bold"/>
+        <Label Content="الباسورد الجديد "  Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" Height="40" Margin="323,177,0,0" VerticalAlignment="Top" Width="148" RenderTransformOrigin="0.487,0.603" HorizontalContentAlignment="Center" FontSize="22" FontFamily="Simplified Arabic" FontWeight="Bold"/>
+        <TextBox x:Name="old_pass_txt" HorizontalAlignment="Left" Height="40" Margin="84,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203" FontSize="22"/>
+        <TextBox x:Name="new_pass_txt" HorizontalAlignment="Left" Height="40" Margin="84,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203" FontSize="22"/>
+        <Button  Content="تحديث"  Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" Height="34" Margin="186,290,0,0" VerticalAlignment="Top" Width="132" FontSize="22" FontWeight="Bold" Click="update_pass_btn"/>
+
+    </Grid>
+</Window>

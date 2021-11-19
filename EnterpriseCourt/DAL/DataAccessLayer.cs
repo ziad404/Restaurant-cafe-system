@@ -13,7 +13,7 @@ namespace EnterpriseCourt.DAL
         SqlConnection sqlConnection;
         public DataAccessLayer()
         {
-            sqlConnection = new SqlConnection(@"Data Source=.\SQLEXPRESS; Database=Court; Integrated Security=true");
+            sqlConnection = new SqlConnection(@"Data Source=.\SQLEXPRESS; Database=v2; Integrated Security=true");
         }
         public void Open()
         {

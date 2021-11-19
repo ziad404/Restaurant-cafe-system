@@ -32,6 +32,15 @@ namespace EnterpriseCourt.Screens.Auth
             if (DT.Rows.Count > 0)
             {
                 MessageBox.Show("zpy kosmak sh8alah");
+                helper.password = password_txt.Password;
+                helper.ID = Int16.Parse(DT.Rows[0]["id"].ToString());
+
+                if(DT.Rows[0]["role"].ToString() == "admin")
+                {
+                    Admin_roles admin_Roles = new Admin_roles();
+                    this.Hide();
+                    admin_Roles.Show();
+                }
             }
             else
             {

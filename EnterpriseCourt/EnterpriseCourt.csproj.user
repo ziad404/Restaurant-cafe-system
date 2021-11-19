@@ -7,10 +7,22 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Screens\adding_category.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Screens\Auth\AddingUser.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Screens\Auth\adding_item.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\Auth\adding_table.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Screens\Auth\Authntication.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\Auth\Update_admin_pass.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Screens\CashierRoles\OrderType.xaml.cs">
@@ -18,10 +30,22 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Screens\adding_category.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Screens\Auth\AddingUser.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Screens\Auth\adding_item.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\Auth\adding_table.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Screens\Auth\Authntication.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\Auth\Update_admin_pass.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Screens\CashierRoles\OrderType.xaml">
