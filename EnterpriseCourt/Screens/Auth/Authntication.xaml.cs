@@ -31,20 +31,28 @@ namespace EnterpriseCourt.Screens.Auth
             DataTable DT = actions.Login(userName_txt.Text, password_txt.Password);
             if (DT.Rows.Count > 0)
             {
-                MessageBox.Show("zpy kosmak sh8alah");
+               
                 helper.password = password_txt.Password;
                 helper.ID = Int16.Parse(DT.Rows[0]["id"].ToString());
 
-                if(DT.Rows[0]["role"].ToString() == "admin")
+                if(DT.Rows[0]["role"].ToString() == "Admin")
                 {
                     Admin_roles admin_Roles = new Admin_roles();
                     this.Hide();
                     admin_Roles.Show();
                 }
+                else
+                {
+                    Screens.CashierRoles.OrderType ot = new Screens.CashierRoles.OrderType();
+                    this.Hide();
+                    ot.Show();
+                }
             }
             else
             {
                 MessageBox.Show("Login Failed");
+                userName_txt.Text = "";
+                password_txt.Password = "";
             }
         }
     }

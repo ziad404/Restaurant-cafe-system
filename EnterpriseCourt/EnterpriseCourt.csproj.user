@@ -22,10 +22,19 @@
     <Compile Update="Screens\Auth\Authntication.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Screens\Auth\edit_item.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Screens\Auth\Update_admin_pass.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Screens\CashierRoles\menu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Screens\CashierRoles\OrderType.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\CashierRoles\Tables.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -45,10 +54,19 @@
     <Page Update="Screens\Auth\Authntication.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Screens\Auth\edit_item.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Screens\Auth\Update_admin_pass.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Screens\CashierRoles\menu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Screens\CashierRoles\OrderType.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\CashierRoles\Tables.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

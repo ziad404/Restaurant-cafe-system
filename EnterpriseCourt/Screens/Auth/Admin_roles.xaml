@@ -12,11 +12,13 @@
             <ColumnDefinition Width="9*"/>
         </Grid.ColumnDefinitions>
         <Button x:Name="addtable_btn" Content="اضافه مقعد"  HorizontalAlignment="Left" Height="51" Margin="215,31,0,0" VerticalAlignment="Top" Width="316" Background="#FF32DDC1" Foreground="#FF6E5FCC" FontWeight="Bold" FontSize="22" Click="addtable_btn_Click"/>
-        <Button x:Name="additem_btn"  Background="#FF32DDC1" Foreground="#FF6E5FCC" Content="اضافة طلب " HorizontalAlignment="Left" Height="50" Margin="216,144,0,0" VerticalAlignment="Top" Width="315" RenderTransformOrigin="0.599,-4.183" FontWeight="Bold" FontSize="22" Click="additem_btn_Click"/>
+        <Button x:Name="additem_btn"  Background="#FF32DDC1" Foreground="#FF6E5FCC" Content="اضافة طلب " HorizontalAlignment="Left" Height="50" Margin="216,185,0,0" VerticalAlignment="Top" Width="315" RenderTransformOrigin="0.599,-4.183" FontWeight="Bold" FontSize="22" Click="additem_btn_Click"/>
         <Button x:Name="inventory_btn" Content="جرد يومي " HorizontalAlignment="Left" FontSize="22" Height="55" Margin="215,524,0,0" VerticalAlignment="Top" Width="315" Background="#FF32DDC1" Foreground="#FF6E5FCC" RenderTransformOrigin="0.499,-0.513" FontWeight="Bold"/>
         <Button x:Name="adduser_btn"  FontWeight="Bold" Content="اضافة مستخدم " HorizontalAlignment="Left" Height="45" Margin="216,0,0,0" VerticalAlignment="Center" Width="315" Background="#FF32DDC1" Foreground="#FF6E5FCC" FontSize="22" Click="adduser_btn_Click"/>
-        <Button Content="تغيير باسورد الادمن" HorizontalAlignment="Left" Height="47" Margin="216,337,0,0" VerticalAlignment="Top" Width="315" Background="#FF32DDC1" Foreground="#FF6E5FCC" FontWeight="Bold" FontSize="22" Click="update_pass_btn"/>
-        <Button x:Name="addcat_btn" Content="اضافة نوع" HorizontalAlignment="Left" Height="42" Margin="216,243,0,0" VerticalAlignment="Top" Width="315" Background="#FF32DDC1" Foreground="#FF6E5FCC" FontWeight="Bold" FontSize="22" Click="addcat_btn_Click"/>
+        <Button Content="تغيير باسورد الادمن" HorizontalAlignment="Left" Height="47" Margin="216,351,0,0" VerticalAlignment="Top" Width="315" Background="#FF32DDC1" Foreground="#FF6E5FCC" FontWeight="Bold" FontSize="22" Click="update_pass_btn"/>
+        <Button x:Name="addcat_btn" Content="اضافة نوع" HorizontalAlignment="Left" Height="42" Margin="216,264,0,0" VerticalAlignment="Top" Width="315" Background="#FF32DDC1" Foreground="#FF6E5FCC" FontWeight="Bold" FontSize="22" Click="addcat_btn_Click"/>
+        <Button x:Name="addtable_btn_Copy" Content="تعديل الطلب "  HorizontalAlignment="Left" Height="51" Margin="214,109,0,0" VerticalAlignment="Top" Width="316" Background="#FF32DDC1" Foreground="#FF6E5FCC" FontWeight="Bold" FontSize="22" Click="addtable_btn_Copy_Click" />
+        <Button x:Name="inventory_btn_Copy" Content="الكاشير" HorizontalAlignment="Left" FontSize="22" Height="55" Margin="216,631,0,0" VerticalAlignment="Top" Width="315" Background="#FF32DDC1" Foreground="#FF6E5FCC" RenderTransformOrigin="0.499,-0.513" FontWeight="Bold" Click="cash_btn"/>
 
     </Grid>
 </Window>

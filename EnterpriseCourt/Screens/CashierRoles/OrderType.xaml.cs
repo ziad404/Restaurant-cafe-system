@@ -23,5 +23,39 @@ namespace EnterpriseCourt.Screens.CashierRoles
         {
             InitializeComponent();
         }
+
+        private void hall_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Tables t = new Tables();
+            t.Show();
+        }
+
+        private void takeaway_btn_Click(object sender, RoutedEventArgs e)
+        {
+            menu m = new menu();
+         
+            m.Show();
+        }
+
+        private void delivery_btn_Click(object sender, RoutedEventArgs e)
+        {
+            menu m = new menu();
+          
+            m.Show();
+        }
+
+        private void workers_meal_btn_Click(object sender, RoutedEventArgs e)
+        {
+            menu m = new menu();
+       
+            m.Show();
+        }
+
+        private void diafa_btn_Click(object sender, RoutedEventArgs e)
+        {
+            menu m = new menu();
+         
+            m.Show();
+        }
     }
 }

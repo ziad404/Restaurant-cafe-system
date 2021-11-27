@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\ziade\Desktop\CourtNewSystem\EnterpriseCourt\App.xaml
-81512268074
+111641983284
 
-13-1640267139
+18-825270727
 194-1774662705
-Screens\adding_category.xaml;Screens\Auth\AddingUser.xaml;Screens\Auth\adding_item.xaml;Screens\Auth\adding_table.xaml;Screens\Auth\Admin_roles.xaml;Screens\Auth\Authntication.xaml;Screens\Auth\Update_admin_pass.xaml;Screens\CashierRoles\OrderType.xaml;
+Screens\adding_category.xaml;Screens\Auth\AddingUser.xaml;Screens\Auth\adding_item.xaml;Screens\Auth\adding_table.xaml;Screens\Auth\Admin_roles.xaml;Screens\Auth\Authntication.xaml;Screens\Auth\edit_item.xaml;Screens\Auth\Update_admin_pass.xaml;Screens\CashierRoles\menu.xaml;Screens\CashierRoles\OrderType.xaml;Screens\CashierRoles\Tables.xaml;
 
 False
 

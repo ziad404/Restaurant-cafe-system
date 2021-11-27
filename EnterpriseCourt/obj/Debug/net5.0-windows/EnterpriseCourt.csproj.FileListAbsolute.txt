@@ -44,7 +44,6 @@ C:\Users\ziade\Desktop\CourtNewSystem\EnterpriseCourt\bin\Debug\net5.0-windows\r
 C:\Users\ziade\Desktop\CourtNewSystem\EnterpriseCourt\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
 C:\Users\ziade\Desktop\CourtNewSystem\EnterpriseCourt\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\ziade\Desktop\CourtNewSystem\EnterpriseCourt\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\ziade\Desktop\CourtNewSystem\EnterpriseCourt\obj\Debug\net5.0-windows\EnterpriseCourt.csproj.AssemblyReference.cache
 C:\Users\ziade\Desktop\CourtNewSystem\EnterpriseCourt\obj\Debug\net5.0-windows\Screens\Auth\AddingUser.g.cs
 C:\Users\ziade\Desktop\CourtNewSystem\EnterpriseCourt\obj\Debug\net5.0-windows\Screens\Auth\Authntication.g.cs
 C:\Users\ziade\Desktop\CourtNewSystem\EnterpriseCourt\obj\Debug\net5.0-windows\Screens\CashierRoles\OrderType.g.cs
@@ -73,3 +72,10 @@ C:\Users\ziade\Desktop\CourtNewSystem\EnterpriseCourt\obj\Debug\net5.0-windows\S
 C:\Users\ziade\Desktop\CourtNewSystem\EnterpriseCourt\obj\Debug\net5.0-windows\Screens\Auth\Update_admin_pass.baml
 C:\Users\ziade\Desktop\CourtNewSystem\EnterpriseCourt\obj\Debug\net5.0-windows\Screens\Auth\adding_item.g.cs
 C:\Users\ziade\Desktop\CourtNewSystem\EnterpriseCourt\obj\Debug\net5.0-windows\Screens\Auth\adding_item.baml
+C:\Users\ziade\Desktop\CourtNewSystem\EnterpriseCourt\obj\Debug\net5.0-windows\Screens\Auth\edit_item.g.cs
+C:\Users\ziade\Desktop\CourtNewSystem\EnterpriseCourt\obj\Debug\net5.0-windows\Screens\Auth\edit_item.baml
+C:\Users\ziade\Desktop\CourtNewSystem\EnterpriseCourt\obj\Debug\net5.0-windows\EnterpriseCourt.csproj.AssemblyReference.cache
+C:\Users\ziade\Desktop\CourtNewSystem\EnterpriseCourt\obj\Debug\net5.0-windows\Screens\CashierRoles\menu.g.cs
+C:\Users\ziade\Desktop\CourtNewSystem\EnterpriseCourt\obj\Debug\net5.0-windows\Screens\CashierRoles\menu.baml
+C:\Users\ziade\Desktop\CourtNewSystem\EnterpriseCourt\obj\Debug\net5.0-windows\Screens\CashierRoles\Tables.g.cs
+C:\Users\ziade\Desktop\CourtNewSystem\EnterpriseCourt\obj\Debug\net5.0-windows\Screens\CashierRoles\Tables.baml

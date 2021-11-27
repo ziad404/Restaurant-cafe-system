@@ -34,8 +34,28 @@ namespace EnterpriseCourt.Screens.Auth
                 DataTable dt = actions.getAllCategories();
                 foreach(DataRow DR in dt.Rows)
                 {
-                    type_menu.Items.Add(DR["Name"].ToString());
+
+                    Utils.ComboBoxPairItem comboBoxPairItem = new Utils.ComboBoxPairItem();
+                    comboBoxPairItem.Text = DR["Name"].ToString();
+                    comboBoxPairItem.Value = DR["id"].ToString();
+
+                    type_menu.Items.Add(comboBoxPairItem);
+
                 }
+
+                DataTable dtTypes = actions.getAllTypes();
+                foreach (DataRow DR in dtTypes.Rows)
+                {
+
+                    Utils.ComboBoxPairItem comboBoxPairItem = new Utils.ComboBoxPairItem();
+                    comboBoxPairItem.Text = DR["type"].ToString();
+                    comboBoxPairItem.Value = DR["id"].ToString();
+
+                    type_order.Items.Add(comboBoxPairItem);
+
+                }
+
+
 
             }
             catch (Exception ex)
@@ -44,9 +64,19 @@ namespace EnterpriseCourt.Screens.Auth
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
+       
 
+        private void add_item(object sender, RoutedEventArgs e)
+        {
+            //(type_menu.SelectedItem as Utils.ComboBoxPairItem).Value());
+            DataTable DT = actions.add_item(
+                item_name_txt.Text,
+                float.Parse(price_txt.Text),
+                Int32.Parse((type_menu.SelectedItem as Utils.ComboBoxPairItem).Value.ToString()),
+                Int32.Parse((type_order.SelectedItem as Utils.ComboBoxPairItem).Value.ToString())
+                );
+            MessageBox.Show("new item added successfully");
+            
         }
     }
 }

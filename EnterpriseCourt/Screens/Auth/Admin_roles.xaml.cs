@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace EnterpriseCourt
 {
     /// <summary>
@@ -44,10 +45,7 @@ namespace EnterpriseCourt
             addcat.Show();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+        
 
         private void update_pass_btn(object sender, RoutedEventArgs e)
         {
@@ -59,6 +57,19 @@ namespace EnterpriseCourt
         {
             adding_item ai = new adding_item();
             ai.Show();
+        }
+
+        private void addtable_btn_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            edit_item ei = new edit_item();
+            ei.Show();
+        }
+
+        private void cash_btn(object sender, RoutedEventArgs e)
+        {
+            Screens.CashierRoles.OrderType ot = new Screens.CashierRoles.OrderType();
+            this.Hide();
+            ot.Show();
         }
     }
 }
