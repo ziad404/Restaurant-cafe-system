@@ -28,34 +28,39 @@ namespace EnterpriseCourt.Screens.CashierRoles
         {
             Tables t = new Tables();
             t.Show();
+            helper.order_id = 1;
         }
 
         private void takeaway_btn_Click(object sender, RoutedEventArgs e)
         {
-            menu m = new menu();
+            Ordering m = new Ordering();
          
             m.Show();
+            helper.order_id = 3;
         }
 
         private void delivery_btn_Click(object sender, RoutedEventArgs e)
         {
-            menu m = new menu();
-          
+            Ordering m = new Ordering();
+
             m.Show();
+            helper.order_id = 2;
         }
 
         private void workers_meal_btn_Click(object sender, RoutedEventArgs e)
         {
-            menu m = new menu();
-       
+            Ordering m = new Ordering();
+
             m.Show();
+            helper.order_id = 4;
         }
 
         private void diafa_btn_Click(object sender, RoutedEventArgs e)
         {
-            menu m = new menu();
-         
+            Ordering m = new Ordering();
+
             m.Show();
+            helper.order_id = 5;
         }
     }
 }

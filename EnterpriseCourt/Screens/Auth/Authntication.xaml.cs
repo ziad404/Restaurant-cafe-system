@@ -33,6 +33,7 @@ namespace EnterpriseCourt.Screens.Auth
             {
                
                 helper.password = password_txt.Password;
+                Utils.helper_user.cashiername = userName_txt.Text;
                 helper.ID = Int16.Parse(DT.Rows[0]["id"].ToString());
 
                 if(DT.Rows[0]["role"].ToString() == "Admin")

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EnterpriseCourt.Screens.Auth"
         mc:Ignorable="d"
-        Title="edit_item" Height="500" Width="800">
+        Title="edit_item" Height="500" Width="800" WindowStartupLocation="CenterScreen">
     <Grid Margin="0,0,0,-6">
         <Label Content="اختر النوع "  Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" Height="40" Margin="603,88,0,0" VerticalAlignment="Top" Width="148" RenderTransformOrigin="0.487,0.603" HorizontalContentAlignment="Center" FontSize="22" FontFamily="Simplified Arabic" FontWeight="Bold"/>
         <Label Content="اختر الصنف "  Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" Height="40" Margin="603,194,0,0" VerticalAlignment="Top" Width="148" RenderTransformOrigin="0.487,0.603" HorizontalContentAlignment="Center" FontSize="22" FontFamily="Simplified Arabic" FontWeight="Bold"/>

@@ -68,8 +68,52 @@ namespace EnterpriseCourt
         private void cash_btn(object sender, RoutedEventArgs e)
         {
             Screens.CashierRoles.OrderType ot = new Screens.CashierRoles.OrderType();
-            this.Hide();
+           // this.Hide();
             ot.Show();
+        }
+
+        private void show_info_btn_Click(object sender, RoutedEventArgs e)
+        {
+            show_customer_info sh = new show_customer_info();
+           // this.Hide();
+            sh.Show();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Authntication a = new Authntication();
+            this.Hide();
+            a.Show();
+        }
+
+        private void food_sales_btn(object sender, RoutedEventArgs e)
+        {
+            total_food_sales tf = new total_food_sales();
+            tf.Show();
+        }
+
+        private void drinks_sales_btn(object sender, RoutedEventArgs e)
+        {
+            total_drinks_sales td = new total_drinks_sales();
+            td.Show();
+        }
+
+        private void change_password_pass(object sender, RoutedEventArgs e)
+        {
+            changing_void_password cv = new changing_void_password();
+            cv.Show();
+        }
+
+        private void delete_reciept(object sender, RoutedEventArgs e)
+        {
+            voiding_reciept vr = new voiding_reciept();
+            vr.Show();
+        }
+
+        private void inventory_btn_Click(object sender, RoutedEventArgs e)
+        {
+            empty_day ee = new empty_day();
+            ee.Show();
         }
     }
 }

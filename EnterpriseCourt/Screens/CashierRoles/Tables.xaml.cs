@@ -30,23 +30,7 @@ namespace EnterpriseCourt.Screens.CashierRoles
 
         private void InitializeUI()
         {
-            TextBlock textBlock2 = new TextBlock();
-            textBlock2.Text = "ألاخضر = فاضي و ألاحمر = مليان";
-            textBlock2.FontSize = 18;
-            textBlock2.FontWeight = FontWeights.Medium;
-            textBlock2.Padding = new Thickness(5);
-            textBlock2.Background = new SolidColorBrush(Colors.DarkRed);
-            textBlock2.TextAlignment = TextAlignment.Center;
-            TablesPanel.Children.Add(textBlock2);
-            TextBlock textBlock1 = new TextBlock();
-            textBlock1.Text = "المقاعد";
-            textBlock1.FontSize = 18;
-            textBlock1.FontWeight = FontWeights.Medium;
-            textBlock1.Padding = new Thickness(5);
-            textBlock1.Background = new SolidColorBrush(Colors.DarkKhaki);
-            textBlock1.TextAlignment = TextAlignment.Center;
-            TablesPanel.Children.Add(textBlock1);
-
+            
             DataTable DT = actions.getAllTables();
 
             Dictionary<string ,Utils.Pair<string, string>> TablesData;
@@ -136,12 +120,43 @@ namespace EnterpriseCourt.Screens.CashierRoles
         void OnbClick(object sender, RoutedEventArgs e)
         {
             Button bt = sender as Button;
+
+            //taking_order ta = new taking_order();
+            //ta.Show();
+            Components.Optional_question oq = new Components.Optional_question();
+            oq.Show();
+
+            string tableId = "";
+
+            for(int i =1;i <bt.Name.ToString().Length; i++)
+            {
+                tableId += bt.Name.ToString()[i];
+
+            }
+
+            helper.selectedTableId = Int32.Parse(tableId);
+            helper.selectedTableNum = bt.Content.ToString();
+
+
+            //Ordering o = new Ordering();
+            //o.Show();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             TablesPanel.Children.Clear();
             InitializeUI();
+        }
+
+        private void move_table(object sender, RoutedEventArgs e)
+        {
+            moving_table mt = new moving_table();
+            mt.Show();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

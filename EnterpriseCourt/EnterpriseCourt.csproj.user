@@ -22,19 +22,61 @@
     <Compile Update="Screens\Auth\Authntication.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Screens\Auth\changing_void_password.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Screens\Auth\edit_item.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\Auth\empty.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\Auth\empty_day.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\Auth\show_customer_info.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\Auth\total_drinks_sales.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\Auth\total_food_sales.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Screens\Auth\Update_admin_pass.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Screens\CashierRoles\menu.xaml.cs">
+    <Compile Update="Screens\Auth\voiding_item.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\Auth\voiding_reciept.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\CashierRoles\moving_table.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\CashierRoles\Ordering.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Screens\CashierRoles\OrderType.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Screens\CashierRoles\recipt.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\CashierRoles\reset.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\CashierRoles\TableOrders.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Screens\CashierRoles\Tables.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\Components\Optional_question.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\Components\TableMessage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -54,19 +96,64 @@
     <Page Update="Screens\Auth\Authntication.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Screens\Auth\changing_void_password.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Screens\Auth\edit_item.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\Auth\empty.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\Auth\empty_day.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\Auth\show_customer_info.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\Auth\total_drinks_sales.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\Auth\total_food_sales.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Screens\Auth\Update_admin_pass.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Screens\CashierRoles\menu.xaml">
+    <Page Update="Screens\Auth\voiding_item.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\Auth\voiding_reciept.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\CashierRoles\moving_table.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\CashierRoles\Ordering.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Screens\CashierRoles\OrderType.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Screens\CashierRoles\recipt.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\CashierRoles\reset.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\CashierRoles\TableOrders.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Screens\CashierRoles\Tables.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\CashierRoles\taking_order.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\Components\Optional_question.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\Components\TableMessage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

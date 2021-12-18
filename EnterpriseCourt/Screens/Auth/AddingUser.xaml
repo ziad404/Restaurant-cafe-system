@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EnterpriseCourt.Screens.Auth"
         mc:Ignorable="d"
-        Title="اضافة مستخدم" Height="688" Width="800" ResizeMode="NoResize">
+        Title="اضافة مستخدم" Height="688" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid Margin="0,0,10,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="209*"/>
@@ -15,10 +15,10 @@
             <ColumnDefinition Width="171*"/>
             <ColumnDefinition Width="629*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Text="Name" TextWrapping="Wrap" Margin="98,67,0,0" FontSize="22" FontWeight="Bold" Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Gadugi" Grid.ColumnSpan="2" Width="126"/>
+        <TextBlock Text="Name"   TextWrapping="Wrap" Margin="98,67,0,0" FontSize="22" FontWeight="Bold" Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Gadugi" Grid.ColumnSpan="2" Width="126"/>
         <TextBlock Text="Password" TextWrapping="Wrap" Margin="95,167,0,0" FontSize="22" FontWeight="Bold" Background="#FF32DDC1" Foreground="#FF6E5FCC" Grid.ColumnSpan="2" HorizontalAlignment="Left" FontFamily="Gadugi" Width="129" VerticalAlignment="Top"/>
-        <TextBox x:Name="name_txt" Grid.Column="1" HorizontalAlignment="Center" Height="31" Margin="0,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="374" BorderBrush="#FF97A7D5"/>
-        <PasswordBox x:Name="pass_txt" Grid.Column="1" HorizontalAlignment="Center" Height="31" Margin="0,167,0,0" VerticalAlignment="Top" Width="374"/>
+        <TextBox x:Name="name_txt"  FontSize="20" Grid.Column="1" HorizontalAlignment="Center" Height="31" Margin="0,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="374" BorderBrush="#FF97A7D5"/>
+        <PasswordBox x:Name="pass_txt" FontSize="20" Grid.Column="1" HorizontalAlignment="Center" Height="31" Margin="0,167,0,0" VerticalAlignment="Top" Width="374"/>
         <CheckBox x:Name="admin_box" Content="Admin" Grid.Column="1" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="390" FontSize="22" FontFamily="Gadugi" FontWeight="Bold" Foreground="#FF5A6EF0" Margin="255,297,0,0" Grid.RowSpan="2" Checked="admin_box_Checked"/>
         <CheckBox x:Name="cashier_box" Content="Cashier" Grid.Column="1" HorizontalAlignment="Left" Height="29" Margin="255,47,0,0" VerticalAlignment="Top" Width="170" FontWeight="Bold" FontFamily="Gadugi" FontSize="22" Grid.Row="1" RenderTransformOrigin="0.249,0.623" Foreground="#FF5A69F0" Checked="cashier_box_Checked"/>
         <TextBlock Text="Role" TextWrapping="Wrap" Margin="98,294,0,0" FontSize="22" FontWeight="Bold" Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" FontFamily="Gadugi" Grid.ColumnSpan="2" Width="129" VerticalAlignment="Top" Grid.RowSpan="2"/>

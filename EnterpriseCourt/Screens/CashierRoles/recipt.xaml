@@ -1,0 +1,58 @@
+﻿<Window x:Class="EnterpriseCourt.Screens.CashierRoles.recipt"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EnterpriseCourt.Screens.CashierRoles"
+        mc:Ignorable="d"
+        Title="recipt" Height="auto" Width="275" WindowStartupLocation="CenterScreen" >
+    <Grid>
+        <StackPanel Height="auto" x:Name="reciept_pnl" >
+            
+            <Image Source="/Screens/CashierRoles/court.jpg" Name="ImageViewer1" Height="80" Stretch="Fill" Width="250"></Image>
+            <StackPanel   Orientation="Horizontal" Width="200" Height="25">
+                <Label   FontSize="9" Content="serial number : " FontFamily="Engravers MT" Width="113" />
+                <Label  FontSize="9" x:Name="serial"   Content="20" FontFamily="Engravers MT" Width="63"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Width="130">
+                <Label x:Name="counter"  FontWeight="Bold" Content="250"/>
+                <Label   Content=" : رقم الفاتورة" FontWeight="Bold"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Width="130">
+                <Label x:Name="cashier"  FontWeight="Bold" Content="pepo"/>
+                <Label   Content=" : الكاشير " FontWeight="Bold"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Width="250">
+                <Label x:Name="time"  FontWeight="Bold" Content="20-11-2021  12:30 AM" Width="151"/>
+                <Label   Content=" : التاريخ " FontWeight="Bold"/>
+            </StackPanel>
+
+            <DataGrid  ScrollViewer.HorizontalScrollBarVisibility="Disabled" x:Name="dg" Height="auto" ItemsSource="{Binding DT}" AutoGenerateColumns="False" Margin="0 , 10" IsReadOnly="True" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="سعر الصنف"  Binding="{Binding Path=price}" Width="80"></DataGridTextColumn>
+                    <DataGridTextColumn Header="العدد"  Binding="{Binding Path=number_of_items}" Width="35"></DataGridTextColumn>
+                    <DataGridTextColumn Header="الصنف" Binding="{Binding Path=name}" Width="160"></DataGridTextColumn>
+                </DataGrid.Columns>
+                <DataGrid.Resources>
+                    <Style TargetType="{x:Type DataGridColumnHeader}">
+
+                        <Setter Property="BorderThickness" Value="1,3,0,1"></Setter>
+                        <Setter Property="FontWeight" Value="Bold"></Setter>
+                        <Setter Property="FontSize" Value="13"></Setter>
+                        <Setter Property="BorderBrush" Value="Black"></Setter>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    </Style>
+                    
+
+                </DataGrid.Resources>
+            </DataGrid>
+
+            <StackPanel Orientation="Horizontal" Width="250" Margin="0,10,0,50">
+                <Label x:Name="totalpr" FontSize="15" FontWeight="Bold" Content="" Width="151"/>
+                <Label   Content=" : السعر الكلي " FontWeight="Bold" FontSize="15"/>
+            </StackPanel>
+
+        </StackPanel>
+
+    </Grid>
+</Window>

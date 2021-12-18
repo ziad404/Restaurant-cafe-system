@@ -78,5 +78,7 @@ namespace EnterpriseCourt.Screens.Auth
             MessageBox.Show("new item added successfully");
             
         }
+
+       
     }
 }

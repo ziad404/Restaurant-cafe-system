@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EnterpriseCourt.Screens.Auth"
         mc:Ignorable="d"
-        Title="adding_table" Height="450" Width="500">
+        Title="adding_table" Height="450" Width="500" WindowStartupLocation="CenterScreen">
     <Grid>
         <Button Content="اضافه"  Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" Height="34" Margin="155,238,0,0" VerticalAlignment="Top" Width="132" FontSize="22" FontWeight="Bold" Click="add_table"/>
         <Label Content="اسم المقعد "  Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" Height="40" Margin="323,98,0,0" VerticalAlignment="Top" Width="148" RenderTransformOrigin="0.487,0.603" HorizontalContentAlignment="Center" FontSize="22" FontFamily="Simplified Arabic" FontWeight="Bold"/>

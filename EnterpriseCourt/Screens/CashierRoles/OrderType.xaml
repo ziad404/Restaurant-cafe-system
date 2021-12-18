@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EnterpriseCourt.Screens.CashierRoles"
         mc:Ignorable="d"
-        Title="نوع الطلب" Height="581" Width="800" ResizeMode="NoResize">
+        Title="نوع الطلب" Height="581" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid RenderTransformOrigin="0.5,0.5" Margin="-29,10,5,64">
 
 
-        <Button x:Name="hall_btn" Content="صاله" HorizontalAlignment="Left" Height="58" Margin="383,17,0,0" VerticalAlignment="Top" Width="133" FontSize="22" Foreground="#FF5F64CD" FontWeight="Bold" Background="#FF32DDC1" Click="hall_btn_Click"/>
-        <Button x:Name="takeaway_btn" Content="تيك اواي" HorizontalAlignment="Left" Height="58" Margin="383,207,0,0" VerticalAlignment="Top" Width="133" FontSize="22" Foreground="#FF5F68F0" FontWeight="Bold" Background="#FF32DDC1" RenderTransformOrigin="0.425,-0.172" Click="takeaway_btn_Click"/>
-        <Button x:Name="delivery_btn" Content="دليفري" HorizontalAlignment="Left" Height="58" Margin="383,308,0,0" VerticalAlignment="Top" Width="130" FontSize="22" FontWeight="Bold" Foreground="#FF5F68F0" Background="#FF43DDC1" RenderTransformOrigin="0.514,-0.419" Click="delivery_btn_Click"/>
-        <Button x:Name="diafa_btn" Content="ضيافه" HorizontalAlignment="Left" Height="58" Margin="380,399,0,0" VerticalAlignment="Top" Width="133" FontSize="22" FontWeight="Bold" Foreground="#FF5F68F0" Background="#FF43DDC1" RenderTransformOrigin="0.514,-0.419" Click="diafa_btn_Click"/>
-        <Button x:Name="workers_meal_btn" Content="وجبات العمال " HorizontalAlignment="Left" Height="58" Margin="383,111,0,0" VerticalAlignment="Top" Width="130" FontSize="22" FontWeight="Bold" Foreground="#FF5F68F0" Background="#FF43DDC1" RenderTransformOrigin="0.514,-0.419" Click="workers_meal_btn_Click"/>
+        <Button x:Name="hall_btn" Content="صاله" HorizontalAlignment="Left" Height="58" Margin="383,17,0,0" VerticalAlignment="Top" Width="133" FontSize="20" Foreground="#FF5F64CD" FontWeight="Bold" Background="#FF32DDC1" Click="hall_btn_Click"/>
+        <Button x:Name="takeaway_btn" Content="تيك اواي" HorizontalAlignment="Left" Height="58" Margin="383,207,0,0" VerticalAlignment="Top" Width="133" FontSize="20" Foreground="#FF5F68F0" FontWeight="Bold" Background="#FF32DDC1" RenderTransformOrigin="0.425,-0.172" Click="takeaway_btn_Click"/>
+        <Button x:Name="delivery_btn" Content="دليفري" HorizontalAlignment="Left" Height="58" Margin="386,111,0,0" VerticalAlignment="Top" Width="130" FontSize="20" FontWeight="Bold" Foreground="#FF5F68F0" Background="#FF43DDC1" RenderTransformOrigin="0.514,-0.419" Click="delivery_btn_Click"/>
+        <Button x:Name="diafa_btn" Content="ضيافه" HorizontalAlignment="Left" Height="58" Margin="380,399,0,0" VerticalAlignment="Top" Width="133" FontSize="20" FontWeight="Bold" Foreground="#FF5F68F0" Background="#FF43DDC1" RenderTransformOrigin="0.514,-0.419" Click="diafa_btn_Click"/>
+        <Button x:Name="workers_meal_btn" Content="وجبات العمال " HorizontalAlignment="Left" Height="58" Margin="383,306,0,0" VerticalAlignment="Top" Width="130" FontSize="20" FontWeight="Bold" Foreground="#FF5F68F0" Background="#FF43DDC1" RenderTransformOrigin="0.514,-0.419" Click="workers_meal_btn_Click"/>
 
     </Grid>
 </Window>

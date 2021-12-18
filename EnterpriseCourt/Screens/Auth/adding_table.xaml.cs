@@ -21,7 +21,7 @@ namespace EnterpriseCourt.Screens.Auth
     public partial class adding_table : Window
     {
         PL.Actions actions = new PL.Actions();
-        int st = 0;
+        bool st = false;
         public adding_table()
         {
             InitializeComponent();

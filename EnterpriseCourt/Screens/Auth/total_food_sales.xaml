@@ -1,0 +1,43 @@
+﻿<Window x:Class="EnterpriseCourt.Screens.Auth.total_food_sales"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EnterpriseCourt.Screens.Auth"
+        mc:Ignorable="d"
+        Title="total_food_sales" Height="600" Width="900" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid  ItemsSource="{Binding DT}" AutoGenerateColumns="False" IsReadOnly="True"  x:Name="food_sales_grid" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold" Height="252" Margin="0,228,0,0" VerticalAlignment="Top" Width="786">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="Turquoise"></Setter>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    <Setter Property="BorderThickness" Value="0,0,1,2"></Setter>
+                    <Setter Property="BorderBrush" Value="Black"></Setter>
+                </Style>
+
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn  Header="الصنف"  Binding="{Binding Path=name}" Width="150"></DataGridTextColumn>
+                <DataGridTextColumn Header="العدد"  Binding="{Binding Path=number_of_items}" Width="150"></DataGridTextColumn>
+                <DataGridTextColumn Header="سعر الواحد"  Binding="{Binding Path=price}" Width="150"></DataGridTextColumn>
+                <DataGridTextColumn Header="المبيع الكلي"  Binding="{Binding Path=total_price}" Width="*"></DataGridTextColumn>
+
+
+            </DataGrid.Columns>
+
+
+        </DataGrid>
+        <Label Content="Total food sales" Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Center" Height="44" Margin="0,27,0,0" VerticalAlignment="Top" Width="360" HorizontalContentAlignment="Center" FontSize="20" FontWeight="Bold"/>
+        <Label Content="اسم النوع  "  Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" Height="40" Margin="695,120,0,0" VerticalAlignment="Top" Width="148" RenderTransformOrigin="0.487,0.603" HorizontalContentAlignment="Center" FontSize="22" FontFamily="Simplified Arabic" FontWeight="Bold"/>
+        <ComboBox x:Name="filter_food"  HorizontalAlignment="Left" Height="40" Margin="380,120,0,0" VerticalAlignment="Top" Width="204" FontFamily="Gadugi" FontSize="16" SelectionChanged="filter_food_SelectionChanged" />
+        <Button Content="Export to excel" Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" Height="47" Margin="57,506,0,0" VerticalAlignment="Top" Width="164" Click="Button_Click" FontSize="18" FontWeight="Bold" FontFamily="Gadugi"/>
+        <Label Content=" : السعر الكلي" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="695,503,0,0" VerticalAlignment="Top" Width="148" Height="50" FontSize="22" FontWeight="Bold" />
+        <Label x:Name="total" Content="" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="563,503,0,0" VerticalAlignment="Top" Width="148" Height="50" FontSize="22" FontWeight="Bold" />
+
+    </Grid>
+</Window>
