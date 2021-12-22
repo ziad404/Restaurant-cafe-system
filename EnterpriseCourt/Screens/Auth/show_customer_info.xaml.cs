@@ -31,8 +31,8 @@ namespace EnterpriseCourt.Screens.Auth
                 it.Add(new items
                 {
                     id = DR["id"].ToString(),
-                    name = DR["name"].ToString(),
-                    phone = DR["phone"].ToString()
+                   phone = DR["phone"].ToString(),
+                    address = DR["address"].ToString()
                 });
             }
 
@@ -44,6 +44,7 @@ namespace EnterpriseCourt.Screens.Auth
             public string id { get; set; }
             public string name { get; set; }
             public string phone { get; set; }
+            public string address{ get; set; }
         }
 
         

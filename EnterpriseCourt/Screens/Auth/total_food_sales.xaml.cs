@@ -73,7 +73,6 @@ namespace EnterpriseCourt.Screens.Auth
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
             }
         }
        
@@ -119,7 +118,6 @@ namespace EnterpriseCourt.Screens.Auth
             string[] user = userName.Split("\\");
 
 
-            MessageBox.Show(user[1]);
 
             workbook.Save("C:\\Users\\" + user[1] + "\\Desktop\\Ma2kolat.xlsx");
         }

@@ -27,6 +27,7 @@
         <Button Content="اجمالي مبيعات المشروبات"  Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Center" Height="51" Margin="0,177,0,0" VerticalAlignment="Top" Width="179" FontWeight="Bold" Click="drinks_sales_btn" FontSize="16"/>
         <Button x:Name="change_cancel_pass" Content="تغيير باسورد الالغاء" HorizontalAlignment="Center" FontSize="18" Height="53" Margin="0,249,0,0" VerticalAlignment="Top" Width="152" Background="#FF32DDC1" Foreground="#FF6E5FCC" RenderTransformOrigin="0.499,-0.513" FontWeight="Bold" Click="change_password_pass"/>
         <Button x:Name="inventory_btn_Copy1" Content="حذف اوردر" HorizontalAlignment="Left" FontSize="18" Height="54" Margin="48,337,0,0" VerticalAlignment="Top" Width="150" Background="#FF32DDC1" Foreground="#FF6E5FCC" RenderTransformOrigin="0.499,-0.513" FontWeight="Bold" Click="delete_reciept"/>
+        <Button x:Name="empty" Content="Sales" HorizontalAlignment="Center" FontSize="18" Height="53" Margin="0,433,0,0" VerticalAlignment="Top" Width="152" Background="#FF32DDC1" Foreground="#FF6E5FCC" RenderTransformOrigin="0.499,-0.513" FontWeight="Bold" Click="empty_Click" />
 
     </Grid>
 </Window>

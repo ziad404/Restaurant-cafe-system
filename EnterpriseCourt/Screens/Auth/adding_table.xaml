@@ -9,7 +9,7 @@
     <Grid>
         <Button Content="اضافه"  Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" Height="34" Margin="155,238,0,0" VerticalAlignment="Top" Width="132" FontSize="22" FontWeight="Bold" Click="add_table"/>
         <Label Content="اسم المقعد "  Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" Height="40" Margin="323,98,0,0" VerticalAlignment="Top" Width="148" RenderTransformOrigin="0.487,0.603" HorizontalContentAlignment="Center" FontSize="22" FontFamily="Simplified Arabic" FontWeight="Bold"/>
-        <TextBox x:Name="tbl_name_txt" HorizontalAlignment="Left" Height="40" Margin="84,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203" FontSize="22"/>
+        <TextBox x:Name="tbl_name_txt"  HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="40" Margin="84,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203" FontSize="22"/>
 
     </Grid>
 </Window>

@@ -188,8 +188,49 @@ namespace EnterpriseCourt.Screens.CashierRoles
         }
         void OnbClick1(object sender, RoutedEventArgs e)
         {
-            recipt r = new recipt(Int32.Parse(order_id));
-            r.Show();
+            DateTime dm = DateTime.Now;
+
+
+            DataTable orderDT = actions.get_orders_on_spacific_table(helper.selectedTableId);
+
+            foreach(DataRow DR in orderDT.Rows)
+            {
+
+                for(int i =0; i < Int32.Parse(DR["items_number"].ToString()); i++)
+                {
+                    actions.add_to_salles(
+                        Int32.Parse(DR["item_id"].ToString()),
+                        DR["ItemName"].ToString(),
+                        float.Parse(DR["itemPrice"].ToString()),
+                        helper.order_id, Int32.Parse(DR["order_kind"].ToString()) , 
+                        dm, Int32.Parse(order_id)
+                     );
+
+                }
+
+            }
+
+
+
+
+
+
+            int count = 0;
+            DataTable dt = actions.getCounter();
+            foreach (DataRow DR in dt.Rows)
+            {
+                count = Int32.Parse(DR["counter"].ToString());
+            }
+            actions.update_counter_from_spacific_order( Int32.Parse(order_id) , count);
+            recipt r = new recipt(Int32.Parse(order_id) , helper.order_id);
+            r.ShowDialog();
+            actions.updateCounter(count + 1);
+            actions.delete_order_with_table(helper.selectedTableId);
+            resetPanel.Children.Clear();
+            totalPanel.Children.Clear();
+            myList = new ArrayList();
+            initializeUI();
+            initializeButtonUI();
         }
     }
 }

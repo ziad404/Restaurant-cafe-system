@@ -28,8 +28,11 @@ namespace EnterpriseCourt.Screens.Auth
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           DataTable DT= actions.delete_by_serial(int.Parse(serial_txt.Text));
+            DataTable DT = actions.delete_by_serial(int.Parse(serial_txt.Text));
+            actions.delete_from_salles_items_with_order(int.Parse(serial_txt.Text));
             MessageBox.Show("Order deleted successfully");
+            actions.delete_from_daily_sales(Int32.Parse(serial_txt.Text));
+
         }
     }
 }

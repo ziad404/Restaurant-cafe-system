@@ -48,7 +48,6 @@ namespace EnterpriseCourt.Screens.CashierRoles
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
             }
         }
 
@@ -95,22 +94,13 @@ namespace EnterpriseCourt.Screens.CashierRoles
                 status = DR["status"].ToString();
             }
 
-            MessageBox.Show(status);
 
             if (status == "False")
             {
                 DateTime dm = DateTime.Now;
-                int count = 0;
+                
+                DataTable order = actions.add_order(1, -1, dm);
 
-                DataTable dt_counter = actions.getCounter();
-
-                foreach (DataRow DR in dt_counter.Rows)
-                {
-                    count = Int32.Parse(DR["counter"].ToString());
-                }
-                DataTable order = actions.add_order(1, count, dm);
-
-                actions.updateCounter(count + 1);
                 actions.update_table_status(
                     Int32.Parse((to_box.SelectedItem as
                 Utils.ComboBoxPairItem).Value.ToString()), true);
@@ -127,19 +117,20 @@ namespace EnterpriseCourt.Screens.CashierRoles
                 {
                     for (int j = 0; j < Int32.Parse(array[i].Second); j++)
                     {
+                        
+
                         actions.add_item_to_order
                             (Int32.Parse(new_order_id), Int32.Parse(array[i].First.ToString()));
                     }
                 }
+                actions.delete_from_daily_sales(Int32.Parse(order_id));
+                actions.insert_daily_order(Int32.Parse(new_order_id));
 
                 actions.add_order_to_table(Int32.Parse(new_order_id),
                     Int32.Parse((to_box.SelectedItem as
                     Utils.ComboBoxPairItem).Value.ToString()));
 
-
-
-                
-
+                MessageBox.Show("تم النقل .");
             }
             else
             {
@@ -155,13 +146,15 @@ namespace EnterpriseCourt.Screens.CashierRoles
                 {
                     for (int j = 0; j < Int32.Parse(array[i].Second); j++)
                     {
+
+
                         actions.add_item_to_order
                             (Int32.Parse(new_order_id), Int32.Parse(array[i].First.ToString()));
                     }
                 }
 
                 // MessageBox.Show(new_order_id);
-                MessageBox.Show("moved");
+                MessageBox.Show("تم النقل ");
 
             }
 

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="voiding_item" Height="450" Width="422" WindowStartupLocation="CenterScreen">
     <Grid>
-        <TextBox x:Name="p_txt" HorizontalAlignment="Left" Height="40" Margin="31,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203" FontSize="22"/>
+        <PasswordBox x:Name="p_txt" HorizontalAlignment="Left" Height="40" Margin="31,87,0,0"  VerticalAlignment="Top" Width="203" FontSize="22"/>
         <Label Content="ادخل رمز الالغاء" Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" Height="34" Margin="269,90,0,0" VerticalAlignment="Top" Width="118" FontSize="16" FontWeight="Bold"/>
         <Button  Content="حذف"  Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Center" Height="34" Margin="0,183,0,0" VerticalAlignment="Top" Width="133" FontSize="22" FontWeight="Bold" Click="delete_one_item"/>
     </Grid>

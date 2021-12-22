@@ -19,7 +19,7 @@
             </DataGrid.Resources>
             <DataGrid.Columns>
                 <DataGridTextColumn Header="id" Binding="{Binding Path=id}" Width="150"></DataGridTextColumn>
-                <DataGridTextColumn Header="name"  Binding="{Binding Path=name}" Width="150"></DataGridTextColumn>
+                <DataGridTextColumn Header="address"  Binding="{Binding Path=address}" Width="150"></DataGridTextColumn>
                 <DataGridTextColumn Header="phone"  Binding="{Binding Path=phone}" Width="*"></DataGridTextColumn>
 
 

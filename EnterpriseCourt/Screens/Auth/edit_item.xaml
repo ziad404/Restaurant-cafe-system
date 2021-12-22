@@ -12,7 +12,7 @@
         <ComboBox x:Name="type_menu" HorizontalAlignment="Left" Height="40" Margin="183,88,0,0" VerticalAlignment="Top" Width="297" SelectionChanged="type_menu_SelectionChanged"/>
         <ComboBox x:Name="item_menu" HorizontalAlignment="Left" Height="40" Margin="183,194,0,0" VerticalAlignment="Top" Width="297" SelectionChanged="item_menu_SelectionChanged"/>
         <Label Content="تعديل السعر"  Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" Height="40" Margin="603,299,0,0" VerticalAlignment="Top" Width="148" RenderTransformOrigin="0.487,0.603" HorizontalContentAlignment="Center" FontSize="22" FontFamily="Simplified Arabic" FontWeight="Bold"/>
-        <TextBox x:Name="edit_price_txt" HorizontalAlignment="Left" Height="44" Margin="183,295,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="297"/>
+        <TextBox x:Name="edit_price_txt" FontSize="15"  HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="44" Margin="183,295,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="297"/>
         <Button Content="تعديل" Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" Height="42" Margin="435,381,0,0" VerticalAlignment="Top" Width="208" FontWeight="Bold" FontSize="20" Click="edit"/>
         <Button Content="مسح" Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" Height="42" Margin="183,381,0,0" VerticalAlignment="Top" Width="208" FontWeight="Bold" FontSize="20" Click="delete_item_btn"/>
 

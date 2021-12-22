@@ -32,7 +32,7 @@ namespace EnterpriseCourt.Screens.Auth
 
         private void delete_one_item(object sender, RoutedEventArgs e)
         {
-           DataTable DT= actions.delete_one_item(Int32.Parse(p_txt.Text));
+           DataTable DT= actions.delete_one_item(Int32.Parse(p_txt.Password));
             if (DT.Rows.Count > 0)
             {
                 actions.delete_one_item_from_order(Int32.Parse(order_id), Int32.Parse(itemId));
@@ -45,6 +45,7 @@ namespace EnterpriseCourt.Screens.Auth
                     actions.update_table_status(helper.selectedTableId, false);
                 }
                 MessageBox.Show("deleted");
+                p_txt.Password = "";
             }
             else
             {

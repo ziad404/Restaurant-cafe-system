@@ -51,7 +51,6 @@ namespace EnterpriseCourt.Screens.Auth
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
             }
         }
 

@@ -5,17 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EnterpriseCourt.Screens.CashierRoles"
         mc:Ignorable="d"
-        Title="taking_order" Height="550" Width="800" WindowStartupLocation="CenterScreen">
-    <Grid >
-        <Label Content="اسم العميل"  Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" Height="40" Margin="603,88,0,0" VerticalAlignment="Top" Width="148" RenderTransformOrigin="0.487,0.603" HorizontalContentAlignment="Center" FontSize="22" FontFamily="Simplified Arabic" FontWeight="Bold"/>
-        <Label Content="رقم التليفون"  Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" Height="40" Margin="603,173,0,0" VerticalAlignment="Top" Width="148" RenderTransformOrigin="0.487,0.603" HorizontalContentAlignment="Center" FontSize="22" FontFamily="Simplified Arabic" FontWeight="Bold"/>
-        <Label Content="العنوان"  Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" Height="40" Margin="603,275,0,0" VerticalAlignment="Top" Width="148" RenderTransformOrigin="0.487,0.603" HorizontalContentAlignment="Center" FontSize="22" FontFamily="Simplified Arabic" FontWeight="Bold"/>
-        <Label Content="ملحوظات"  Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" Height="40" Margin="603,366,0,0" VerticalAlignment="Top" Width="148" RenderTransformOrigin="0.487,0.603" HorizontalContentAlignment="Center" FontSize="22" FontFamily="Simplified Arabic" FontWeight="Bold"/>
-        <TextBox x:Name="customer_name_txt" HorizontalAlignment="Left" Height="40" Margin="182,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" FontSize="20"/>
-        <TextBox x:Name="customer_number_txt" HorizontalAlignment="Left" Height="40" Margin="182,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" FontSize="20"/>
-        <TextBox x:Name="customer_address_txt" HorizontalAlignment="Left" Height="40" Margin="182,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" FontSize="20"/>
-        <TextBox x:Name="order_comment_txt" HorizontalAlignment="Left" Height="40" Margin="182,366,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" FontSize="20"/>
-        <Button x:Name="submit_order_btn" Content="طلب"  Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" Height="48" Margin="335,449,0,0" VerticalAlignment="Top" Width="165" Click="submit_order_btn_Click"/>
+        Title="taking_order" Height="550" Width="800" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize" Closed="Window_Closed">
+    <Grid Background="#FF6C6868" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="79*"/>
+            <ColumnDefinition Width="121*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="اسم العميل"  Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" Height="40" Margin="287,88,0,0" VerticalAlignment="Top" Width="148" RenderTransformOrigin="0.487,0.603" HorizontalContentAlignment="Center" FontSize="22" FontFamily="Simplified Arabic" FontWeight="Bold" Grid.Column="1"/>
+        <Label Content="رقم التليفون"  Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" Height="40" Margin="287,173,0,0" VerticalAlignment="Top" Width="148" RenderTransformOrigin="0.487,0.603" HorizontalContentAlignment="Center" FontSize="22" FontFamily="Simplified Arabic" FontWeight="Bold" Grid.Column="1"/>
+        <Label Content="العنوان"  Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" Height="40" Margin="287,275,0,0" VerticalAlignment="Top" Width="148" RenderTransformOrigin="0.487,0.603" HorizontalContentAlignment="Center" FontSize="22" FontFamily="Simplified Arabic" FontWeight="Bold" Grid.Column="1"/>
+        <Label Content="ملحوظات"  Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" Height="40" Margin="287,366,0,0" VerticalAlignment="Top" Width="148" RenderTransformOrigin="0.487,0.603" HorizontalContentAlignment="Center" FontSize="22" FontFamily="Simplified Arabic" FontWeight="Bold" Grid.Column="1"/>
+        <TextBox x:Name="customer_name_txt" HorizontalAlignment="Left" Height="40" Margin="182,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" FontSize="20" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="customer_number_txt" HorizontalAlignment="Left" Height="40" Margin="182,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" FontSize="20" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="customer_address_txt" HorizontalAlignment="Left" Height="40" Margin="182,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" FontSize="20" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="order_comment_txt" HorizontalAlignment="Left" Height="40" Margin="182,366,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" FontSize="20" Grid.ColumnSpan="2"/>
+        <Button x:Name="submit_order_btn" Content="طلب"  Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" Height="48" Margin="108,459,0,0" VerticalAlignment="Top" Width="130" Click="submit_order_btn_Click" Grid.Column="1"/>
+        <Button x:Name="cancel_order" Content="الغاء"  Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" Height="48" Margin="211,459,0,0" VerticalAlignment="Top" Width="130" Click="cancel_order_btn" RenderTransformOrigin="0.477,0.586" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>

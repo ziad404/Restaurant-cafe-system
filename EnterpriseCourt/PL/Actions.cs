@@ -11,6 +11,48 @@ namespace EnterpriseCourt.PL
 {
     class Actions
     {
+
+        public DataTable add_to_salles(
+            int item_id,
+            string item_name,
+            float item_price,
+            int order_type,
+            int order_kind,
+            DateTime date,
+            int order_id
+            )
+        {
+
+
+            DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
+            SqlParameter[] param = new SqlParameter[7];
+
+            param[0] = new SqlParameter("@item_id", SqlDbType.Int);
+            param[0].Value = item_id;
+
+            param[1] = new SqlParameter("@item_name", SqlDbType.NVarChar, 50);
+            param[1].Value = item_name;
+
+            param[2] = new SqlParameter("@item_price", SqlDbType.Float);
+            param[2].Value = item_price;
+
+            param[3] = new SqlParameter("@order_type", SqlDbType.Int);
+            param[3].Value = order_type;
+
+            param[4] = new SqlParameter("@order_kind", SqlDbType.Int);
+            param[4].Value = order_kind;
+
+            param[5] = new SqlParameter("@date", SqlDbType.DateTime);
+            param[5].Value = date;
+
+            param[6] = new SqlParameter("@order_id", SqlDbType.Int);
+            param[6].Value = order_id;
+
+            DAL.Open();
+            DataTable DT = new DataTable();
+            DT = DAL.SelectData("add_to_salles", param);
+            return DT;
+        }
         public DataTable Login(string userName, string password)
         {
             DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
@@ -45,7 +87,7 @@ namespace EnterpriseCourt.PL
             DT = DAL.SelectData("add_user", param);
             return DT;
         }
-        public DataTable add_table(string name ,bool status)
+        public DataTable add_table(string name, bool status)
         {
             DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
             SqlParameter[] param = new SqlParameter[2];
@@ -78,10 +120,11 @@ namespace EnterpriseCourt.PL
 
             DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
             SqlParameter[] param = new SqlParameter[1];
-            param[0] = new SqlParameter("@Id", SqlDbType.Int);
+            param[0] = new SqlParameter("@ID", SqlDbType.Int);
             param[0].Value = id;
 
             DAL.Open();
+
             DT = DAL.SelectData("delete_item", param);
             return DT;
 
@@ -111,6 +154,21 @@ namespace EnterpriseCourt.PL
 
             DAL.Open();
             DT = DAL.SelectData("get_item_price", param);
+            return DT;
+
+        }
+
+        public DataTable get_item(int id)
+        {
+            DataTable DT = new DataTable();
+
+            DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@id", SqlDbType.Int);
+            param[0].Value = id;
+
+            DAL.Open();
+            DT = DAL.SelectData("get_item", param);
             return DT;
 
         }
@@ -187,7 +245,7 @@ namespace EnterpriseCourt.PL
             return DT;
 
         }
-        public DataTable update_table_status(int table_id , bool status)
+        public DataTable update_table_status(int table_id, bool status)
         {
             DataTable DT = new DataTable();
 
@@ -204,7 +262,7 @@ namespace EnterpriseCourt.PL
             return DT;
 
         }
-        public DataTable add_item_to_order(int order_id , int item_id)
+        public DataTable add_item_to_order(int order_id, int item_id)
         {
             DataTable DT = new DataTable();
 
@@ -217,6 +275,22 @@ namespace EnterpriseCourt.PL
 
             DAL.Open();
             DT = DAL.SelectData("add_items_to_orders", param);
+            return DT;
+
+        }
+        public DataTable update_counter_from_spacific_order(int order_id, int counter)
+        {
+            DataTable DT = new DataTable();
+
+            DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
+            SqlParameter[] param = new SqlParameter[2];
+            param[0] = new SqlParameter("@counter", SqlDbType.Int);
+            param[0].Value = counter;
+            param[1] = new SqlParameter("@order_id", SqlDbType.Int);
+            param[1].Value = order_id;
+
+            DAL.Open();
+            DT = DAL.SelectData("update_counter_from-spacific_order", param);
             return DT;
 
         }
@@ -269,14 +343,29 @@ namespace EnterpriseCourt.PL
             SqlParameter[] param = new SqlParameter[1];
             param[0] = new SqlParameter("@order_id", SqlDbType.Int);
             param[0].Value = order_id;
-            
+
 
             DAL.Open();
             DT = DAL.SelectData("insert_daily_order", param);
             return DT;
 
         }
-        public DataTable add_item(string name,float price,int cat_id, int type_id)
+        public DataTable delete_from_daily_sales(int order_id)
+        {
+            DataTable DT = new DataTable();
+
+            DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@order_id", SqlDbType.Int);
+            param[0].Value = order_id;
+
+
+            DAL.Open();
+            DT = DAL.SelectData("delete_from_daily_sales", param);
+            return DT;
+
+        }
+        public DataTable add_item(string name, float price, int cat_id, int type_id)
         {
             DataTable DT = new DataTable();
 
@@ -297,7 +386,6 @@ namespace EnterpriseCourt.PL
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message);
             }
             return DT;
 
@@ -322,7 +410,6 @@ namespace EnterpriseCourt.PL
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message);
             }
             return DT;
 
@@ -340,7 +427,7 @@ namespace EnterpriseCourt.PL
             DT = DAL.SelectData("update_item_price", param);
             return DT;
         }
-        public DataTable Update_admin_pass(string new_pass,int id)
+        public DataTable Update_admin_pass(string new_pass, int id)
         {
             DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
             SqlParameter[] param = new SqlParameter[2];
@@ -364,6 +451,17 @@ namespace EnterpriseCourt.PL
             DT = DAL.SelectData("delete_order_by_serial", param);
             return DT;
         }
+        public DataTable delete_from_salles_items_with_order(int reciept_num)
+        {
+            DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@order_id", SqlDbType.Int);
+            param[0].Value = reciept_num;
+            DAL.Open();
+            DataTable DT = new DataTable();
+            DT = DAL.SelectData("delete_from_salles_items_with_order", param);
+            return DT;
+        }
         public DataTable delete_order_table(int order_id)
         {
             DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
@@ -373,6 +471,19 @@ namespace EnterpriseCourt.PL
             DAL.Open();
             DataTable DT = new DataTable();
             DT = DAL.SelectData("delete_order_table", param);
+
+            return DT;
+        }
+        public DataTable delete_order_with_table(int table_id)
+        {
+            DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@table_id", SqlDbType.Int);
+            param[0].Value = table_id;
+            DAL.Open();
+            DataTable DT = new DataTable();
+            DT = DAL.SelectData("delete_order_with_table", param);
+            update_table_status(table_id, false);
             return DT;
         }
         public DataTable delete_one_item_from_order(int order_id, int item_id)
@@ -412,13 +523,13 @@ namespace EnterpriseCourt.PL
             DAL.Colse();
             return Dt;
         }
-        public DataTable add_customer(string name,string phone)
+        public DataTable add_customer(string address, string phone)
         {
             DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
             SqlParameter[] param = new SqlParameter[2];
-            param[0] = new SqlParameter("@name", SqlDbType.NVarChar, 50);
-            param[0].Value = name;
-            param[1] = new SqlParameter("@phone", SqlDbType.NVarChar,50);
+            param[0] = new SqlParameter("@address", SqlDbType.NVarChar, 50);
+            param[0].Value = address;
+            param[1] = new SqlParameter("@phone", SqlDbType.NVarChar, 50);
             param[1].Value = phone;
             DAL.Open();
             DataTable DT = new DataTable();
@@ -467,11 +578,11 @@ namespace EnterpriseCourt.PL
             return Dt;
         }
 
-        public DataTable update_void_pass(string NewPass,int x)
+        public DataTable update_void_pass(string NewPass, int x)
         {
             DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
             SqlParameter[] param = new SqlParameter[2];
-            param[0] = new SqlParameter("@pass", SqlDbType.NVarChar,50);
+            param[0] = new SqlParameter("@pass", SqlDbType.NVarChar, 50);
             param[0].Value = NewPass;
             param[1] = new SqlParameter("@id", SqlDbType.Int);
             param[1].Value = x;
@@ -538,6 +649,23 @@ namespace EnterpriseCourt.PL
             return DT;
         }
 
-
+        public DataTable get_all_sales(int order_type_id, int order_kind_id, DateTime from_date, DateTime to_date)
+        {
+            DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
+            SqlParameter[] param = new SqlParameter[4];
+            param[0] = new SqlParameter("@order_type_id", SqlDbType.Int);
+            param[0].Value = order_type_id;
+            param[1] = new SqlParameter("@order_kind_id", SqlDbType.Int);
+            param[1].Value = order_kind_id;
+            param[2] = new SqlParameter("@from_date", SqlDbType.DateTime);
+            param[2].Value = from_date;
+            param[3] = new SqlParameter("@to_date", SqlDbType.DateTime);
+            param[3].Value = to_date;
+            DAL.Open();
+            DataTable Dt = new DataTable();
+            Dt = DAL.SelectData("get_all_sales", param);
+            DAL.Colse();
+            return Dt;
+        }
     }
 }

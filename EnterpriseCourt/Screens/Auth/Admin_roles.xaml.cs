@@ -115,5 +115,11 @@ namespace EnterpriseCourt
             empty_day ee = new empty_day();
             ee.Show();
         }
+
+        private void empty_Click(object sender, RoutedEventArgs e)
+        {
+            empty emp = new empty();
+            emp.Show();
+        }
     }
 }

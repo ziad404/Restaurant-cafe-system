@@ -28,7 +28,7 @@ namespace EnterpriseCourt.Screens.Auth
 
         private void update_pass_btn(object sender, RoutedEventArgs e)
         {
-            DataTable DT = actions.update_void_pass(np_txt.Text,1);
+            DataTable DT = actions.update_void_pass(np_txt.Password,1);
             MessageBox.Show("void password changed .");
         }
     }

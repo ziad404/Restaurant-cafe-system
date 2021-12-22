@@ -30,30 +30,35 @@
             </DataGrid.Columns>
         </DataGrid>
         <Label Content="اسم النوع  "  Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" Height="40" Margin="683,27,0,0" VerticalAlignment="Top" Width="148" RenderTransformOrigin="0.487,0.603" HorizontalContentAlignment="Center" FontSize="22" FontFamily="Simplified Arabic" FontWeight="Bold"/>
-        <ComboBox x:Name="filter_drinks"  HorizontalAlignment="Left" Height="40" Margin="368,27,0,0" VerticalAlignment="Top" Width="204" FontFamily="Gadugi" FontSize="16" />
+        <ComboBox x:Name="filter_orders"  HorizontalAlignment="Left" Height="40" Margin="368,27,0,0" VerticalAlignment="Top" Width="204" FontFamily="Gadugi" FontSize="16" />
+        <ComboBox x:Name="type_order"  HorizontalAlignment="Left" Height="40" Margin="28,27,0,0" VerticalAlignment="Top" Width="108" FontFamily="Gadugi" FontSize="16"/>
         <Label Content=" : السعر الكلي" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="690,552,0,0" VerticalAlignment="Top" Width="148" Height="50" FontSize="22" FontWeight="Bold" />
-        <Label x:Name="total" Content="" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="558,552,0,0" VerticalAlignment="Top" Width="148" Height="50" FontSize="22" FontWeight="Bold" />
-        
-        <DatePicker IsTodayHighlighted="True" SelectedDateFormat="Long" Margin="57,27,694,555"/>
-        <TextBox HorizontalAlignment="Left" Margin="57,96,0,0" Text="10" TextWrapping="Wrap" VerticalAlignment="Top" Width="28" Height="23"/>
-        <TextBox HorizontalAlignment="Left" Margin="110,96,0,0" Text="10" TextWrapping="Wrap" VerticalAlignment="Top" Width="28" Height="23"/>
-        <ComboBox Margin="158,96,0,0" Name="ComboBox1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="48" Height="23" RenderTransformOrigin="0.483,-0.834">
+        <Label x:Name="total_lbl" Content="" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="558,552,0,0" VerticalAlignment="Top" Width="148" Height="50" FontSize="22" FontWeight="Bold" />
+
+        <DatePicker x:Name="from_date" IsTodayHighlighted="True" SelectedDateFormat="Long" Margin="511,88,173,494"/>
+        <TextBox x:Name="hour_from" HorizontalAlignment="Left" Margin="578,157,0,0" Text="10" TextWrapping="Wrap" VerticalAlignment="Top" Width="28" Height="23"/>
+        <TextBox x:Name="min_from" HorizontalAlignment="Left" Margin="631,157,0,0" Text="10" TextWrapping="Wrap" VerticalAlignment="Top" Width="28" Height="23"/>
+        <ComboBox x:Name="AP_from" Margin="679,157,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="48" Height="23" RenderTransformOrigin="0.483,-0.834">
             <ComboBoxItem Content="AM"></ComboBoxItem>
             <ComboBoxItem Content="PM"></ComboBoxItem>
         </ComboBox>
 
-        
-        
-        <DatePicker IsTodayHighlighted="True" SelectedDateFormat="Long" Margin="57,154,694,428"/>
-        <TextBox HorizontalAlignment="Left" Margin="57,223,0,0" Text="10" TextWrapping="Wrap" VerticalAlignment="Top" Width="28" Height="23"/>
-        <TextBox HorizontalAlignment="Left" Margin="110,223,0,0" Text="10" TextWrapping="Wrap" VerticalAlignment="Top" Width="28" Height="23"/>
-        <ComboBox Margin="158,223,0,0" x:Name="ComboBox1_Copy" HorizontalAlignment="Left" VerticalAlignment="Top" Width="48" Height="23" RenderTransformOrigin="0.483,-0.834">
+
+
+        <DatePicker x:Name="date_to" IsTodayHighlighted="True" SelectedDateFormat="Long" Margin="179,90,498,492"/>
+        <TextBox x:Name="hour_to" HorizontalAlignment="Left" Margin="252,159,0,0" Text="10" TextWrapping="Wrap" VerticalAlignment="Top" Width="28" Height="23"/>
+        <TextBox x:Name="min_to" HorizontalAlignment="Left" Margin="306,159,0,0" Text="10" TextWrapping="Wrap" VerticalAlignment="Top" Width="28" Height="23"/>
+        <ComboBox Margin="354,159,0,0" x:Name="AP_to" HorizontalAlignment="Left" VerticalAlignment="Top" Width="48" Height="23" RenderTransformOrigin="0.483,-0.834">
             <ComboBoxItem Content="AM"/>
             <ComboBoxItem Content="PM"/>
 
         </ComboBox>
-        <Label Content=" : من" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" Margin="239,27,0,0" VerticalAlignment="Top" Width="71"/>
-        <Label Content=" : الي" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" Margin="239,154,0,0" VerticalAlignment="Top" Width="71"/>
+        <Label Content=" : من" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" Margin="760,88,0,0" VerticalAlignment="Top" Width="71"/>
+        <Label Content=" : الي" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" Margin="434,90,0,0" VerticalAlignment="Top" Width="72"/>
+        <Button Content="عرض" FontWeight="Bold" FontSize="22" HorizontalAlignment="Left" Margin="416,206,0,0" VerticalAlignment="Top" Width="156" Height="45" Background="#FF32DDC1" Click="Button_Click"/>
+
+        <Button x:Name="excel" Content="Export to excel" Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" Height="47" Margin="57,552,0,0" VerticalAlignment="Top" Width="164"  FontSize="18" FontWeight="Bold" FontFamily="Gadugi" Click="Button_Click_1"/>
+        <Label Content=" تحديد النوع"  Background="#FF32DDC1" Foreground="#FF6E5FCC" HorizontalAlignment="Left" Height="40" Margin="192,27,0,0" VerticalAlignment="Top" Width="98" RenderTransformOrigin="0.487,0.603" HorizontalContentAlignment="Center" FontSize="22" FontFamily="Simplified Arabic" FontWeight="Bold"/>
 
     </Grid>
 </Window>

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows;
 
 namespace EnterpriseCourt.DAL
 {
@@ -33,18 +34,26 @@ namespace EnterpriseCourt.DAL
         // Read Data
         public DataTable SelectData(string stored_procedure, SqlParameter[] param)
         {
-            SqlCommand sqlcmd = new SqlCommand();
-            sqlcmd.CommandType = CommandType.StoredProcedure;
-            sqlcmd.CommandText = stored_procedure;
-            sqlcmd.Connection = sqlConnection;
-
-            if (param != null)
-            {
-                sqlcmd.Parameters.AddRange(param);
-            }
-            SqlDataAdapter da = new SqlDataAdapter(sqlcmd);
             DataTable dt = new DataTable();
-            da.Fill(dt);
+            try
+            {
+
+                SqlCommand sqlcmd = new SqlCommand();
+                sqlcmd.CommandType = CommandType.StoredProcedure;
+                sqlcmd.CommandText = stored_procedure;
+                sqlcmd.Connection = sqlConnection;
+
+                if (param != null)
+                {
+                    sqlcmd.Parameters.AddRange(param);
+                }
+                SqlDataAdapter da = new SqlDataAdapter(sqlcmd);
+                da.Fill(dt);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("حدث شئ خطأ");
+            }
             return dt;
         }
 
@@ -52,16 +61,24 @@ namespace EnterpriseCourt.DAL
 
         public void ExecuteCommand(string stored_procedure, SqlParameter[] param)
         {
-            SqlCommand sqlcmd = new SqlCommand();
-            sqlcmd.CommandType = CommandType.StoredProcedure;
-            sqlcmd.CommandText = stored_procedure;
-            sqlcmd.Connection = sqlConnection;
-
-            if (param != null)
+            try
             {
-                sqlcmd.Parameters.AddRange(param);
+
+                SqlCommand sqlcmd = new SqlCommand();
+                sqlcmd.CommandType = CommandType.StoredProcedure;
+                sqlcmd.CommandText = stored_procedure;
+                sqlcmd.Connection = sqlConnection;
+
+                if (param != null)
+                {
+                    sqlcmd.Parameters.AddRange(param);
+                }
+                sqlcmd.ExecuteNonQuery();
             }
-            sqlcmd.ExecuteNonQuery();
+            catch (Exception)
+            {
+                MessageBox.Show("حدث شئ خطأ");
+            }
         }
 
     }
